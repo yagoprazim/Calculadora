@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#320049, #7054d8, #2f0144);
+}
+
+.container{
+    background-color: rgba(90, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+    border: 8px solid rgb(45, 29, 70);
+    box-shadow: 5px 5px 50px 2px black;
+}
+.container .calculadora{
+    position: relative;
+    display: grid;
+}
+.container .calculadora .value{
+    grid-column: span 4;
+    height: 140px;
+    width: 300px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    background: transparent;
+    color: white;
+    border: 10px double rgba(255, 255, 255, 0.05);
+}
+.container .calculadora span{
+    display: grid;
+    place-items: center;
+    width: 75px;
+    height: 75px;
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+.container .calculadora span:hover{
+    transition: 0s;
+    background: rgba(56, 4, 104, 0.2);
+}
+.container .calculadora span:active{
+    background: rgb(73, 57, 141);
+    color: #1c1d1c;
+    font-size: 24px;
+    font-weight: bold;
+}
+.container .calculadora .clear{
+    grid-column: span 2;
+    width: 150px;
+    background: rgba(185, 185, 185, 0.05);
+}
+.container .calculadora .plus{
+    grid-row: span 2;
+    height: 150px;
+}
+.container .calculadora .equal{
+    background: rgba(255, 255, 255, 0.05);
+}
